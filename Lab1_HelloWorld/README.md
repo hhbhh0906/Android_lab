@@ -19,7 +19,7 @@ git init
 #### 4.**添加**远程仓库
 
 ```
-`git remote add origin “your url”`
+git remote add origin “your url”
 ```
 
 ![](D:/Android_lab/lab1_HelloWorld/image/4.png)
