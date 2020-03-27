@@ -2,7 +2,7 @@
 
 #### 1. 建立android工程目录，比如我的工程Android_Lab
 
-##### ![](../lab1_HelloWorld/image/1.png)
+![](../lab1_HelloWorld/image/1.png)
 
 #### 2.建立Android工程HelloWorld
 
