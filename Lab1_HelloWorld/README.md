@@ -42,7 +42,7 @@ git commit -m "Android_Lab"
 git push -u origin master
 ```
 
-###### ![](../lab1_HelloWorld/image/6.png)
+![](../lab1_HelloWorld/image/6.png)
 
 ![](../lab1_HelloWorld/image/7.png)
 
