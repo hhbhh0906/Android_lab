@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LinearLayout</string>
+    <string name="one_one">One,One</string>
+    <string name="one_two">One,Two</string>
+    <string name="one_three">One,Three</string>
+    <string name="one_four">One,Four</string>
+    <string name="two_one">Two,One</string>
+    <string name="two_two">Two,Two</string>
+    <string name="two_three">Two,Three</string>
+    <string name="two_four">Two,Four</string>
+    <string name="three_one">Three,One</string>
+    <string name="three_two">Three,Two</string>
+    <string name="three_three">Three,Three</string>
+    <string name="three_four">Three,Four</string>
+    <string name="four_one">Four,One</string>
+    <string name="four_two">Four,Two</string>
+    <string name="four_three">Four,Three</string>
+    <string name="four_four">Four,Four</string>
+</resources>
