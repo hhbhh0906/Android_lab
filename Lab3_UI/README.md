@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 ##### 运行结果
 
-![](./image/1.png)
+![](D:/Android_lab/lab3_UI/image/1.png)
 
 #### 2.创建自定义布局的AlertDialog
 
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
 ##### 运行结果
 
-![](./image/2.png)
+![](D:/Android_lab/lab3_UI/image/2.png)
 
 #### 3.使用XML定义菜单
 
@@ -282,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
 
 ##### 运行结果
 
-![](./image/3.png)
+![](D:/Android_lab/lab3_UI/image/3.png)
 
 #### 4.创建上下文操作模式(ActionMode)的上下文菜单
 
@@ -566,4 +566,4 @@ public class AdapterCur extends BaseAdapter {
 
 ##### 运行结果
 
-![](./image/4.png)
+![](D:/Android_lab/lab3_UI/image/4.png)
