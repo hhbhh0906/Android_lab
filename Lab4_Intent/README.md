@@ -1,6 +1,6 @@
 ## 实验四  **Intent**
 
-#### **1.**新建一个工程用来获取URL地址并启动Intent
+#### 1.新建一个工程用来获取URL地址并启动Intent
 
 ##### activity_main.xml
 
