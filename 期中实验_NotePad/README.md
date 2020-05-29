@@ -35,7 +35,7 @@
 </LinearLayout>
 ```
 
-#### 第二步：时间戳所显示的页面是在应用程序的首页，因此要对NotePad的应用程序的入口界面（NotesList）进行修改。仔细查看发现NotesList中的PROJECTION中只含有ID和TITLE两个字段，说明只将数据库表中的ID和TITLE两列内容映射出来了，因此要将时间戳也映射出来（我选择映射的是笔记修改时间，有需要的话可以选择笔记创建时间）。修改完PROJECTION之后，PROJECTION会被放入cursor中，而cursor又会被放入适配器中。
+#### 第二步：显示时间戳的界面是在应用程序的首页，因此要对NotePad的入口界面（NotesList）进行修改。仔细查看发现NotesList中的PROJECTION中只含有ID和TITLE两个字段，说明只将数据库表中的ID和TITLE两列内容映射出来了，因此要将时间戳也映射出来（我选择映射的是笔记修改时间，有需要的话可以选择笔记创建时间）。修改完PROJECTION之后，PROJECTION会被放入cursor中，而cursor又会被放入适配器中。
 
 ```
     private static final String[] PROJECTION = new String[] {
@@ -61,7 +61,7 @@
 
 #### 在标题下方确实出现了一连串的数字，但是并不是我们人可以轻易阅读时间格式，因此需要对显示的时间格式进行修改。
 
-#### 第四步：要想对笔记修改时间的显示格式进行修改，就想到笔记每次创建或者修改时就需要不断的更新时间，因此就到笔记编辑界面（NoteEditor）来寻找和更新时间有关的函数。会找到一个updateNote方法，方法中有一行代码为：
+#### 第四步：要想对笔记修改时间的显示格式进行修改，想到笔记每次创建或者修改时就需要不断的更新时间，因此就到笔记编辑界面（NoteEditor）来寻找和更新时间有关的函数。会找到一个updateNote方法，方法中有一行代码为：
 
 ```
 values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,System.currentTimeMillis());
@@ -130,7 +130,7 @@ values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, this.CurrentTime());
 
 #### 确实弹出了搜索框，但是非常遗憾还不能进行搜索功能。因此就想到需要定义有关于搜索的方法。
 
-#### 第二步：因为菜单栏也在应用程序的主页面显示，所以同样要对NotePad的应用程序的入口界面（NotesList）进行修改。寻找和菜单有关的函数以后会发现onCreateOptionsMenu方法，这个方法在每次菜单被创建时就会被调用，因此想到将布局中添加的SearchView组件在这边实现它的具体功能。首先我先自定义了一些SearchView的几个小功能，例如设置默认提示文字之类的。
+#### 第二步：因为菜单栏也在应用程序的主界面显示，所以同样要对NotePad的入口界面（NotesList）进行修改。寻找和菜单有关的函数以后会发现onCreateOptionsMenu方法，这个方法在每次菜单被创建时就会被调用，因此想到将布局中添加的SearchView组件在这边实现它的具体功能。首先我先定义了一些SearchView的小功能，例如设置默认提示文字之类的。
 
 ```
         searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
@@ -148,7 +148,7 @@ values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, this.CurrentTime());
 String selection = NotePad.Notes.COLUMN_NAME_TITLE + " GLOB '*" + newText + "*'";
 ```
 
-#### 之后我们需要思考如何对SQLite进行查询，这边我想到的是通过ContentResolver和ContentProvider进行交互，采用了getContentResolver().query方法查询SQlite中与selection匹配的内容。如果newText为空（即没有输入任何搜索内容），那就显示所有内容。查询完后要将查询到的cursor更新到适配器中具体代码如下：
+#### 之后我们需要思考如何对SQLite进行查询，这边我想到的是通过ContentResolver和ContentProvider进行交互，采用了getContentResolver().query方法查询SQlite中与selection匹配的内容。如果newText为空（即没有输入任何搜索内容），那就显示所有内容。查询完后要将查询到的cursor更新到适配器中，具体代码如下：
 
 ```
     @Override
@@ -208,7 +208,7 @@ String selection = NotePad.Notes.COLUMN_NAME_TITLE + " GLOB '*" + newText + "*'"
     }
 ```
 
-#### 到此为止，就已经实现NotePad的搜索功能了，接下来我来运行一下程序，查看一下效果：
+#### 到此为止，就已经实现NotePad的搜索功能了，接下来我来运行一下程序，看一下运行效果：
 
 ![](./image/3.png)
 
