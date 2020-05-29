@@ -8,5 +8,5 @@
 
 ### 实验四  [Intent](https://github.com/hhbhh0906/Android_lab/tree/master/Lab4_Intent)
 
-### 期中实验  NotePad
+### 期中实验  [NotePad](https://github.com/hhbhh0906/Android_lab/tree/master/%E6%9C%9F%E4%B8%AD%E5%AE%9E%E9%AA%8C_NotePad)
 
